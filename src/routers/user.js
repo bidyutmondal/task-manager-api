@@ -6,6 +6,10 @@ const multer = require('multer')
 const sharp = require('sharp')
 const {sendWelcomeEmail, sendCancellationEmail} = require('../emails/account')
 
+router.get('/dev', (req, res)=>{
+    res.send('Working')
+})
+
 router.post('/users', async (req, res)=>{    
     try{
         const user = new User(req.body);
