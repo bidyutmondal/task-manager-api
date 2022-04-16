@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome to our task manager app</h2>
+    <form method="post" action="/tasks">
+      <input type="text" name="description" id="create-task-input" placeholder="Type your to do!" required>
+      <input type="text" name="completed" id="create-task-rbutton" placeholder="true/false">
+      <br>
+      <button id="create-task">Create Task</button>
+    </form>
+    <form method="get" action="/tasks">
+      <button id="view-task">View Task</button>
+    </form>
+    <form method="post" action="/users/logout">
+      <button id="logout">Logout</button>
+    </form>
+    <form method="post" action="/users/logoutAll">
+      <button id="logoutAll">Logout from all devices</button>
+    </form>
+    
+    <script src="/js/app.js"></script>
+  </body>
+</html>
